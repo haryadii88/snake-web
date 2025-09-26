@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nokia Snake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrapper">
+    <header class="header">
+      <h1>Nokia Snake</h1>
+      <div class="scoreboard">
+        <div class="score" aria-live="polite">Score: <span id="score">0</span></div>
+        <div class="score" aria-live="polite">High Score: <span id="high-score">0</span></div>
+        <div class="speed" aria-live="polite">Speed: <span id="speed">1x</span></div>
+      </div>
+    </header>
+
+    <section class="game-area">
+      <canvas
+        id="game"
+        width="300"
+        height="300"
+        role="img"
+        aria-label="Snake game board"
+        tabindex="0"
+      ></canvas>
+      <div class="status" id="status" aria-live="assertive"></div>
+      <div class="controls" aria-label="On-screen controls">
+        <button class="btn" data-dir="up" aria-label="Move up">▲</button>
+        <div class="middle-row">
+          <button class="btn" data-dir="left" aria-label="Move left">◀</button>
+          <button class="btn" id="pause" aria-label="Pause or resume">⏯</button>
+          <button class="btn" data-dir="right" aria-label="Move right">▶</button>
+        </div>
+        <button class="btn" data-dir="down" aria-label="Move down">▼</button>
+      </div>
+    </section>
+
+    <section class="instructions">
+      <h2>How to Play</h2>
+      <ul>
+        <li>Use the arrow keys, WASD, or the on-screen controls to steer the snake.</li>
+        <li>Eat the blinking pixel to grow longer and increase your score.</li>
+        <li>Avoid running into the walls or your own tail.</li>
+        <li>Press the pause button or hit space to pause/resume.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built for nostalgic fun &middot; Ready for GitHub Pages hosting.</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
